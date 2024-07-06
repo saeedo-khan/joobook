@@ -1,3 +1,5 @@
+"use client";
+
 import { logo } from "@/assets";
 import { navLinks } from "@/constant";
 import Image from "next/image";
@@ -15,7 +17,7 @@ const Navbar = () => {
           <Link
             key={nav.id}
             href={`#${nav.id}`}
-            className={`font-poppins text-base cursor-pointer
+            className={`font-poppins text-base cursor-pointer text-white
                 ${index == navLinks.length - 1 ? "mr-0" : "mr-10"}
             `}
           >
