@@ -13,10 +13,10 @@ const transition = { duration: 0.3, ease: "easeInOut" };
 const Card = () => {
   return (
     <m.div
-      variants={tooltipVariants}
-      initial="hidden"
-      animate="visible"
-      className="w-[394px] h-[543px] text-white flex flex-col rounded-2xl p-4  justify-center bg-gradient-glass"
+      // variants={tooltipVariants}
+      // initial="hidden"
+      // animate="visible"
+      className="w-[394px] h-[543px] text-white flex flex-col flex-none rounded-2xl p-4  justify-center bg-gradient-glass"
     >
       <div className="relative w-full h-[250px] rounded-lg flex-none aspect-square">
         <Image src={monkkk} alt="fake" fill className="rounded-lg" />
