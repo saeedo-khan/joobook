@@ -1,31 +1,46 @@
-import { people01, robot } from "@/assets";
+import { people01, monkkk } from "@/assets";
 import Image from "next/image";
 import React from "react";
+import Button from "./Button";
+import { m } from "framer-motion";
+
+const tooltipVariants = {
+  hidden: { opacity: 1, y: -10 },
+  visible: { opacity: 1, y: 0 },
+};
+const transition = { duration: 0.3, ease: "easeInOut" };
 
 const Card = () => {
   return (
-    <div>
-      <div>
-        <div>
-          <Image src={robot} alt="fake" width={1000} height={1000} />
-        </div>
-        <div>
-          <div className="rounded-full">
-            <Image src={people01} alt="lsdsd" width={32} height={32} />
+    <m.div
+      variants={tooltipVariants}
+      initial="hidden"
+      animate="visible"
+      className="w-[394px] h-[543px] text-white flex flex-col rounded-2xl p-4  justify-center bg-gradient-glass"
+    >
+      <div className="relative w-full h-[250px] rounded-lg flex-none aspect-square">
+        <Image src={monkkk} alt="fake" fill className="rounded-lg" />
+      </div>
+      <div className="grow flex flex-col justify-between">
+        <div className="flex items-start gap-3 px-6 pt-5">
+          <div className="rounded-full flex-none">
+            <Image src={people01} alt="lsdsd" width={40} height={40} />
           </div>
           <div>
-            <h3>Monkey Ape</h3>
-            <p>
-              By <span>@JSmith</span>
+            <h3 className="font-normal tracking-wider font-['Oxanium']">
+              Monkey Ape
+            </h3>
+            <p className="text-sm font-normal tracking-wider font-['Lato']">
+              By <span className="font-light">@JSmith</span>
             </p>
           </div>
         </div>
-        <div>
+        <div className="flex items-start justify-between px-6">
           <div>
-            <p>On Sale 😨</p>
+            <p className="text-base font-normal font-['Oxanium']">On Sale 🔥</p>
           </div>
-          <div>
-            <div>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-1.5">
               <span>
                 <svg
                   width="20"
@@ -52,16 +67,21 @@ const Card = () => {
                   />
                 </svg>
               </span>
-              <p>
+              <p className="text-xl font-normal tracking-wide space-x-2 font-['Oxanium']">
                 <span>4.89</span>
                 <span>ETH</span>
               </p>
             </div>
-            <p>($ 456,874.68)</p>
+            <p className="text-sm ml-4 font-normal tracking-wide font-['Oxanium']">
+              ($ 456,874.68)
+            </p>
           </div>
         </div>
+        <div className="px-6">
+          <Button>Buy Now</Button>
+        </div>
       </div>
-    </div>
+    </m.div>
   );
 };
 

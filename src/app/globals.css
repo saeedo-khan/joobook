@@ -63,3 +63,9 @@ body {
 .box-shadow {
   box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 }
+
+
+.bg-gradient-glass {
+  background: linear-gradient(148deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(20px)
+}
